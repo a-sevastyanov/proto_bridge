@@ -1,0 +1,30 @@
+# ==== C++ ====
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+*.o
+*.obj
+*.exe
+*.out
+
+# ==== Python ====
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# ==== Protobuf generated  ====
+*_pb2.py
+*.pb.cc
+*.pb.h
+
+# ==== IDE / OS ====
+.vscode/
+.idea/
+.DS_Store
