@@ -21,12 +21,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_fd:
             age = 23,
             is_active = True,
             timestamp = 123456789,
-            user = [Role.DEVELOPER, Role.QA],
+            roles = [Role.DEVELOPER, Role.QA],
         )
 
         data: bytes = user.SerializeToString()
         header = struct.pack(">I", len(data))
-        print(type(header), ": ", header)
+        # print(type(header), ": ", header)
         packet = header + data
         client_fd.sendall(packet)
     except ConnectionRefusedError:
