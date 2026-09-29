@@ -8,6 +8,15 @@ message UserInfo {
     string email = 3;
     int32 age = 4;
     bool is_active = 5;
-    int64 created_at_unix = 6;
-    repeated string roles = 7;
+    int64 timestamp = 6;
+    repeated Role roles = 7;
+}
+
+enum Role {
+    UNSPECIFIED = 0;
+    USER = 1;
+    ADMIN = 2;
+    MODERATOR = 3;
+    DEVELOPER = 4;
+    QA = 5;
 }
